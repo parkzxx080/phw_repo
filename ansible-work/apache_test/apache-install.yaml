@@ -1,0 +1,11 @@
+- name : apache install test
+  hosts : phw2
+  tasks :
+  - name : install apache packages 
+    yum :
+     name : httpd
+     state : present
+  - name : httpd is running
+    service : 
+     name : httpd
+     state : started

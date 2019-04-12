@@ -1,0 +1,1 @@
+https://translate.google.com/translate?hl=ko&sl=en&u=https://codingbee.net/ansible/ansible-a-playbook-for-setting-up-an-apache-webserver&prev=search
