@@ -4,14 +4,13 @@
   - name : install apache packages 
     yum :
      name : httpd
-     state : intalld
-  - name : httpd is running
-    service : 
-     name : httpd
-     state : started
+     state : present
   - name : apache config PORT 8080 seting
     lineinfile :
      dest : /etc/httpd/conf/httpd.conf
-     regxp : `Listen 80`
-     line : 'Listen 8080`
-      
+     regexp : '^Listen'
+     line : 'Listen 8080'
+  - name : httpd is running
+    service :
+     name : httpd
+     state : started
