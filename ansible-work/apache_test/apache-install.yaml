@@ -8,7 +8,7 @@
   - name : apache config PORT 8080 seting
     lineinfile :
      dest : /etc/httpd/conf/httpd.conf
-     regexp : '^Listen'
+     regexp : 'Listen'
      line : 'Listen 8080'
   - name : httpd is running
     service :
