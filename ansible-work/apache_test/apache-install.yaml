@@ -4,7 +4,7 @@
   - name : install apache packages 
     yum :
      name : httpd
-     state : present
+     state : installed
   - name : apache config PORT 8080 seting
     lineinfile :
      dest : /etc/httpd/conf/httpd.conf
