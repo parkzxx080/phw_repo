@@ -1,0 +1,20 @@
+- name : torque client install
+  hosts : phw2
+  tasks :
+  - name : torque mom install 
+#    shell : sh /data/6.0.1/torque-package-mom-linux-x86_64.sh --install
+    shell : sh "{{ data_path }}"/torque-package-mom-linux-x86_64.sh --install
+  - name : torque client install        
+#    shell : sh /data/6.0.1/torque-package-clients-linux-x86_64.sh --install
+    shell : sh "{{ data_path }}"/torque-package-clients-linux-x86_64.sh --install
+  - name : torque lib copy
+    copy :
+     src : /etc/ld.so.conf.d/torque.conf
+     dest : /etc/ld.so.conf.d/
+  - name : torque client install
+    shell : /sbin/ldconfig
+  - name : pbs_mom enable
+    shell : systemctl enable pbs_mom.service
+  - name : pbs_mom start
+    shell : systemctl start pbs_mom.service
+
