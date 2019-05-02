@@ -70,6 +70,7 @@ ansible
 
     (1) playbook에서 hosts를 변수로 받고 vars 모듈로 해당 변수의 값을 선언 할 수 있다.
 ![var1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var1.png)
+
         1) hosts는 hostname이라는 변수의 값을 가져온다.
         2) vars 안에 hostname 이라는 변수 안에 phw3 값을 넣어 준다.
 
