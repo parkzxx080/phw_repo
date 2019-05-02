@@ -65,8 +65,12 @@ Markdown 사용법
 
     (2) image 링크 걸기
         ex) 구글 아이콘을 클릭시 구글 사이트로 이동
-        [![텍스트](그림경로)] (링크주소)
-        [![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)] (http://www.google.com)
+        [![텍스트](그림경로)](링크주소)
+        [![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)](http://www.google.com)
 
 [![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)](http://www.google.com)
 
+    (3) github으로 이미지 올리기
+
+        1) img 디렉토리 생성
+[md1](./img/md1.png)
