@@ -48,24 +48,25 @@ Markdown 사용법
 ------------------
     (1) [연결할 단어] (링크 주소)
     ex) 
-    markdown : 검색엔진은 [구글] (http://www.google.com "구글")을 사용합니다.
+    markdown : 검색엔진은 [구글](http://www.google.com "구글")을 사용합니다.
 
 동작 : 검색엔진은 [구글](http://www.google.com "구글")을 사용합니다.
 
 1-5. image 삽입
 ----------------
     (1) 기본 문법
-    ![텍스트] (그림경로)
-    1)구글 이미지 가져오기
-    ![구글] (https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)
+    ![텍스트](그림경로)
+    
+        1)구글 이미지 가져오기
+        ![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)
 
 ![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)
 
 
     (2) image 링크 걸기
-    ex) 구글 아이콘을 클릭시 구글 사이트로 이동
-    [![텍스트] (그림경로)] (링크주소)
-    [![구글] (https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)] (http://www.google.com)
+        ex) 구글 아이콘을 클릭시 구글 사이트로 이동
+        [![텍스트](그림경로)] (링크주소)
+        [![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)] (http://www.google.com)
 
 [![구글](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)](http://www.google.com)
 
