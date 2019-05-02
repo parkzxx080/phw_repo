@@ -76,14 +76,15 @@ Markdown 사용법
    ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md1.png)
 
         2) 임의의 이미지를 생성 후 img 디렉토리에 저장
-   ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md2.png)
+   ![md2](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md2.png)
 
         3) github에 img를 올린다
-   ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md3.png)
+   ![md3](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md3.png)
 
         4) 자신이 올려놓은 이미지 주소로 들어가 이미지 위에 우측 마우스 클릭하여 이미지 주소 복사
-   ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md4.png)
+   ![md4](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md4.png)
 
         5) markdown 작성 후 github에 올린 후 정상동작 확인
-   ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md5.png)
+   ![md5](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md5.png)
+   ![md6](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md6.png)
    
