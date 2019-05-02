@@ -73,4 +73,4 @@ Markdown 사용법
     (3) github으로 이미지 올리기
 
         1) img 디렉토리 생성
-![md1](http://github.com/phw_repo/img/md1.png)
+![md1](./phw_repo/img/md1.png)
