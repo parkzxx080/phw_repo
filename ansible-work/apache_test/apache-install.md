@@ -1,7 +1,7 @@
 ansible
 ===============
 1. 4월 3주차
-------------
+-----------------
 1-1. server -> client로 파일 복사하기 (예: index.html을 /var/www/html에 넣어보기)
 -----------------------
     server : phw1
@@ -65,6 +65,25 @@ ansible
 ![host5](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/host5.png)
 ![host6](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/host6.png)
 
-1-3. 인용문
--------------
-    
+1-3. ansible-playbook 에서 inventory 와 var를 분리해볼것
+-------------------------------------------------------
+
+    (1) playbook에서 hosts를 변수로 받고 vars 모듈로 해당 변수의 값을 선언 할 수 있다.
+![var1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var1.png)
+        1) hosts는 hostname이라는 변수의 값을 가져온다.
+        2) vars 안에 hostname 이라는 변수 안에 phw3 값을 넣어 준다.
+
+    (2) play-book 전체 내용
+![var2](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var2.png)
+
+        1) 대상 호스트 : hostname 이라는 변수로 받아온다
+        2) hostname 변수는 phw3 이라고 선언한다.
+        3) 아파치 install
+        4) Port 8080 변경
+        5) httpd service 시작
+        6) index.html copy
+        7) index.html에 변수로 받아오는 hostname 추가
+
+    (3) play-book 실행 및 확인
+![var3](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var3.png)
+![var4](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var4.png)
