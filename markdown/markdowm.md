@@ -74,3 +74,6 @@ Markdown 사용법
 
         1) img 디렉토리 생성
    ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md1.png)
+
+        2) 임의의 이미지를 생성 후 img 디렉토리에 저장
+   ![md1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/md2.png
