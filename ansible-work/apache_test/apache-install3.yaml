@@ -1,0 +1,21 @@
+- name : apache install test
+  hosts : phw2
+  tasks :
+  - name : install apache packages 
+    yum :
+     name : httpd
+     state : installed
+  - name : apache config PORT 8080 seting
+    lineinfile :
+     dest : /etc/httpd/conf/httpd.conf
+     regexp : 'Listen'
+     line : 'Listen 8080'
+  - name : index.html copy
+    copy :
+     src : /data/phw_repo/ansible-work/apache_test/index.html
+     dest : /var/www/html/
+  - name : httpd is running
+    service :
+     name : httpd
+     state : started
+

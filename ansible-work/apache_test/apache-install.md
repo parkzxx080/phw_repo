@@ -1,18 +1,23 @@
-Markdown 사용법
+ansible
 ===============
-1. 문법
+1. 4월 3주차
 -----------------------
-1-1. 문서 제목 및 부제목
+1-1. server -> client로 파일 복사하기 (예: index.html을 /var/www/html에 넣어보기)
 -----------------------
-<pre>
-(1) # : 처음으로 사용되는 해더 부분 H1
-(2) ## : H2
-(3) ### : H3
-(4) #### : H4
-(5) ##### : H5
-(6) ###### : H6
-글머리는 1~6까지만 지원
-</pre>
+    server : phw1
+    client : phw2
+    (1) index.html server에 생성 
+![cp1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/cp1.png)
+    (2) ansible-playbook copy 모듈 추가
+![cp1](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/cp2.png)
+
+        - copy 모듈
+        src : copy 할 대상을 지정
+        dest : copy 위치 지정
+    (3) 전체 playbook
+    (6) ###### : H6
+    글머리는 1~6까지만 지원
+
 
 1-2. 테이블 만들기
 ---------------------
