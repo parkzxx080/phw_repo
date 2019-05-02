@@ -1,5 +1,7 @@
 - name : apache install test
   hosts : "{{ hostname }}"
+  vars :
+   hostname : phw3
   tasks :
   - name : install apache packages 
     yum :
