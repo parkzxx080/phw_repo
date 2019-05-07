@@ -88,3 +88,4 @@ ansible
     (3) play-book 실행 및 확인
 ![var3](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var3.png)
 ![var4](https://raw.githubusercontent.com/parkzxx080/phw_repo/master/img/apache/var4.png)
+[![link](https://asciinema.org/a/v1PyZxTB540T9FURDTxvuFm2P.png)](https://asciinema.org/a/v1PyZxTB540T9FURDTxvuFm2P)
