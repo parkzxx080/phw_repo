@@ -40,15 +40,10 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
 
 * Restart/enable service
 
-    <code>systemctl restart xinetd
-    
-    systemctl enable mariadb.service
-
-    systemctl restart mariadb
-
-    systemctl enable httpd.service
-
-    systemctl restart httpd
-
-    systemctl enable dhcpd.service
+        systemctl restart xinetd
+        systemctl enable mariadb.service
+        systemctl restart mariadb
+        systemctl enable httpd.service
+        systemctl restart httpd
+        systemctl enable dhcpd.service
 
