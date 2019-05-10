@@ -33,3 +33,22 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
 * Warewulf provisioning config file 수정
 
     <code>perl -pi -e "s/device = eth1/device = ${master node device name}/" /etc/warewulf/provision.conf</code>
+
+* PXE booting시 tftp를 사용해 배포 함으로 tftp 활성화
+
+    <code>perl -pi -e "s/^\s+disable\s+= yes/ disable = no/" /etc/xinetd.d/tftp</code>
+
+* Restart/enable service
+
+    <code>systemctl restart xinetd
+    
+    systemctl enable mariadb.service
+
+    systemctl restart mariadb
+
+    systemctl enable httpd.service
+
+    systemctl restart httpd
+
+    systemctl enable dhcpd.service
+
