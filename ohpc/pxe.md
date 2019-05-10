@@ -1,16 +1,15 @@
 OpenHPC PXE BOOT warewulf + PBS 설정 
 ==================================
-1. hosts file 설정
+1.hosts file 설정
 
     echo server_ip host_name >> /etc/hosts
 
-2. firewall service disabled
+2.firewall service disabled
 
     systemctl disable firewalld
-    
     systemctl stop firewalld
 
-3. Enable OpenHPC repository for local use
+3.Enable OpenHPC repository for local use
 
     yum install http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
 
