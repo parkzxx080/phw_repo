@@ -32,4 +32,4 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
 
 * Warewulf provisioning config file 수정
 
-    perl -pi -e "s/device = eth1/device = ${master node device name}/" /etc/warewulf/provision.conf
+    <code>perl -pi -e "s/device = eth1/device = ${master node device name}/" /etc/warewulf/provision.conf</code>
