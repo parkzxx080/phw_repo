@@ -10,5 +10,11 @@ OpenHPC PXE BOOT warewulf + PBS 설정
     
     systemctl stop firewalld
 
+3. Enable OpenHPC repository for local use
 
+    yum install http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
 
+4.Install base meta-packages
+
+    yum -y install ohpc-base
+    yum -y install ohpc-warewulf
