@@ -7,6 +7,7 @@ OpenHPC PXE BOOT warewulf + PBS 설정
 2. firewall service disabled
 
     systemctl disable firewalld
+    
     systemctl stop firewalld
 
 
