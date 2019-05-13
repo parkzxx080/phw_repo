@@ -59,8 +59,8 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
 
 9. chroot(compute node) 이미지 안에 기본 openHPC base 설치
 
-     yum -y --installroot=$CHROOT install ohpc-base-compute
-     cp -p /etc/resolv.conf $CHROOT/etc/resolv.conf
+    yum -y --installroot=$CHROOT install ohpc-base-compute
+    cp -p /etc/resolv.conf $CHROOT/etc/resolv.conf
 
 10.PBSpro client 설치 및 기본 setting
 
@@ -84,6 +84,8 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
 
 * client에 home 및 base img Nfs mount 적용
 
+        echo "{nfs serverip}:/home /home nfs nfsvers=3,nodev,nosuid 0 0" >> $CHROOT/etc/fstab
+        echo "{nfs serverip}:/opt/ohpc/pub /opt/ohpc/pub nfs nfsvers=3,nodev,nosuid 0 0" >> $CHROOT/etc/fstab
         echo "/home *(rw,no_subtree_check,fsid=10,no_root_squash)" >> /etc/exports
         echo "/opt/ohpc/pub *(ro,no_subtree_check,fsid=11)" >> /etc/exports
         exportfs -a
@@ -127,11 +129,11 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
 
 * bootstrap image 작성
 
-    <code>wwbootstrap `uname -r`</code>
+        wwbootstrap `uname -r`
 
 15.Virtual Node File System(VNFS) image 생성
 
-    wwvnfs --chroot $CHOORT
+    wwvnfs --chroot $CHROOT
 
 16.Provisioning을 위한 node 등록
 
@@ -162,16 +164,24 @@ OpenHPC PXE BOOT warewulf + PBS 설정 (KVM test 용)
     qmgr -c "create node {client hostname}"
     pbsnodes -a
 
-18. 계정생성 및 Warewulf file resync
+18.계정생성 및 Warewulf file resync
 
     useradd -m test
     passwd test
     wwsh file resync
 
-19 mpi 설치 및 test
+19.mpi 설치 및 test
 
     yum -y install openmpi3-gnu7-ohpc mpich-gnu7-ohpc lmod-defaults-gnu7-openmpi3-ohpc
     su - test
     mpicc -O3 /opt/ohpc/pub/examples/mpi/hello.c
     qsub -I -l select={node 수}:mpiprocs={cpu 수}
     prun ./a.out
+
+20.test 동영상 link
+[![linke](https://asciinema.org/a/T2Rr7VeZkcyC3NCc1u9dg2GSr.png)](https://asciinema.org/a/T2Rr7VeZkcyC3NCc1u9dg2GSr)
+
+21.kvm test 시 주의 사항
+
+* kvm network 설정 시 dhcp 사용하지 않도록 설정 해당 dhcp가 켜져 있는 경우 하나의 ip대역에 두개의 dhcp server가 동작 함으로 충돌 발생
+* Server OS 설치시 mariadb가 자동으로 같이 설치하는 옵션을 주고 설치 할 경우 ohpc-wawulf 설치시 install 되는 mariadb 충돌발생 기존 mariadb 삭제 후 진행 
